@@ -18,8 +18,8 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/DinhPhuc/windows-rdp/main/loop.bat -OutFile loop.bat
     - name: Download Launcher.
       run: |
-      Invoke-WebRequest https://unanimated-dittos.000webhostapp.com/Trash/telegram_icon-icons.com_72055.ico -OutFile "$env:tmp\tg.ico"
-      Invoke-WebRequest https://unanimated-dittos.000webhostapp.com/Trash/sellix-logos-idEokOde4t.ico -OutFile "$env:tmp\sl.ico"
+        Invoke-WebRequest https://unanimated-dittos.000webhostapp.com/Trash/telegram_icon-icons.com_72055.ico -OutFile "$env:tmp\tg.ico"
+        Invoke-WebRequest https://unanimated-dittos.000webhostapp.com/Trash/sellix-logos-idEokOde4t.ico -OutFile "$env:tmp\sl.ico"
         Invoke-WebRequest https://unanimated-dittos.000webhostapp.com/Trash/tg.url -OutFile "TG Group.url"
         Invoke-WebRequest https://unanimated-dittos.000webhostapp.com/Trash/MRX-Hacking.url -OutFile "Sellix Store.url"
 
@@ -36,7 +36,7 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy wallpaper.png D:\a\wallpaper.png
         copy wallpaper.bat D:\a\wallpaper.bat
-        copy TG Group.url C:\Users\Public\Desktop\TG Group.url
+        copy "TG Group.url" "C:\Users\Public\Desktop\TG Group.url"
         copy "Sellix Store.url" "C:\Users\Public\Desktop\Sellix Store.url"
 
     - name: Making tunnels
